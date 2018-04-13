@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for client/src/js/messenger.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">client/src/js</a> messenger.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>66/84</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.57% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>66/84</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getCurrentUser, getUserToken } from '../utils/userUtils';
+&nbsp;
+const Messenger = (doc, win, userName, userToken) =&gt; {
+  const myName = userName || <span class="branch-1 cbranch-no" title="branch not covered" >getCurrentUser();</span>
+  const token = userToken || <span class="branch-1 cbranch-no" title="branch not covered" >getUserToken();</span>
+&nbsp;
+  // Begin DOM manipulation logic
+  const messageFeed = doc.getElementById('message-feed');
+  const messageInput = doc.getElementById('message-input');
+  const submitButton = doc.getElementById('submit-message');
+&nbsp;
+  const wScroll = () =&gt; {
+    const heightToScroll = (130);
+    const header = doc.getElementById('header');
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (messageFeed.scrollTop &gt; heightToScroll) {
+<span class="cstat-no" title="statement not covered" >      header.className = 'header header-scrolled';</span>
+<span class="cstat-no" title="statement not covered" >      messageFeed.className = 'message-feed message-feed-scrolled';</span>
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (messageFeed.scrollTop &lt; 1) {
+      header.className = 'header header-unscrolled';
+      messageFeed.className = 'message-feed';
+    }
+  };
+&nbsp;
+  messageFeed.addEventListener('scroll', wScroll, false);
+&nbsp;
+  wScroll();
+&nbsp;
+  const addMessage = (author, message, color, dt) =&gt; {
+    const hour = dt.getHours() &lt; 10 ? `0${dt.getHours()}` : <span class="branch-1 cbranch-no" title="branch not covered" >dt.getHours();</span>
+    const minutes = dt.getMinutes() &lt; 10 ? <span class="branch-0 cbranch-no" title="branch not covered" >`0${dt.getMinutes()}` </span>: dt.getMinutes();
+    const container = doc.createElement('div');
+    const nameContainer = doc.createElement('div');
+    const name = doc.createElement('h1');
+    const bodyContainer = doc.createElement('div');
+    const body = doc.createElement('p');
+    const timeContainer = doc.createElement('div');
+    const time = doc.createElement('p');
+&nbsp;
+    name.innerText = author;
+    name.style.color = color;
+    nameContainer.className = 'message-name';
+    nameContainer.appendChild(name);
+&nbsp;
+    container.appendChild(nameContainer);
+&nbsp;
+    body.innerText = message;
+    bodyContainer.className = 'message-body';
+    bodyContainer.appendChild(body);
+&nbsp;
+    container.appendChild(bodyContainer);
+&nbsp;
+    time.innerText = `Today ${hour}:${minutes}`;
+    timeContainer.className = 'message-timestamp';
+    timeContainer.appendChild(time);
+&nbsp;
+    container.appendChild(timeContainer);
+&nbsp;
+    container.classList.add('message');
+    if (author === myName) {
+      container.classList.add('message-to');
+    } else {
+      container.classList.add('message-from');
+    }
+&nbsp;
+    messageFeed.appendChild(container);
+    messageFeed.scrollTop = messageFeed.scrollHeight;
+  };
+&nbsp;
+  // End DOM manipulation logic and begin websocket implementation
+  win.WebSocket = win.WebSocket || win.MozWebSocket;
+&nbsp;
+  if (!win.WebSocket) {
+    messageInput.value = 'Sorry, but your browser doesn\'t support WebSocket.';
+    return;
+  }
+&nbsp;
+  const connection = new WebSocket(`ws://127.0.0.1:8000/?token=${token}`);
+&nbsp;
+  connection.onopen = () =&gt; {
+    connection.send(myName);
+    messageInput.removeAttribute('disabled');
+  };
+&nbsp;
+  connection.onerror = () =&gt; {
+    messageInput.setAttribute('disabled', 'disabled');
+    messageInput.value = 'Unable to communicate with the WebSocket server. Try logging in again';
+  };
+&nbsp;
+  connection.onmessage = (message) =&gt; {
+    const json = JSON.parse(message.data);
+    const { data, type } = json;
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (type === 'history') {
+<span class="cstat-no" title="statement not covered" >      messageFeed.innerHTML = '';</span>
+<span class="cstat-no" title="statement not covered" >      for (let i = 0; i &lt; json.data.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >        addMessage(data[i].author, data[i].text, data[i].color, new Date(data[i].time));</span>
+      }
+<span class="cstat-no" title="statement not covered" >      messageInput.focus();</span>
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (type === 'message') {
+      messageInput.removeAttribute('disabled');
+      addMessage(data.author, data.text, data.color, new Date(data.time));
+      messageInput.focus();
+    }
+  };
+&nbsp;
+  messageInput.onkeydown = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (e.keyCode === 13) {</span>
+      const msg = <span class="cstat-no" title="statement not covered" >e.target.value;</span>
+<span class="cstat-no" title="statement not covered" >      if (!msg) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      connection.send(msg);</span>
+<span class="cstat-no" title="statement not covered" >      e.target.value = '';</span>
+    }
+  };
+&nbsp;
+  submitButton.onclick = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (messageInput.value) {</span>
+<span class="cstat-no" title="statement not covered" >      connection.send(messageInput.value);</span>
+<span class="cstat-no" title="statement not covered" >      messageInput.value = '';</span>
+    }
+  };
+&nbsp;
+  setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (connection.readyState !== 1) {</span>
+<span class="cstat-no" title="statement not covered" >      messageInput.setAttribute('disabled', 'disabled');</span>
+<span class="cstat-no" title="statement not covered" >      messageInput.value = 'Unable to communicate with the WebSocket server.';</span>
+    }
+  }, 3000);
+};
+&nbsp;
+export default Messenger;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 25 2018 02:16:30 GMT+0100 (WAT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

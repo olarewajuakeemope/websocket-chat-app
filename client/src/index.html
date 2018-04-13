@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>My Chat App</title>
+    <style>
+      body {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login-page">
+				<div class="body"></div>
+				<div class="grad"></div>
+				<div class="header">
+					<div>My <span>Chat</span></div>
+				</div>
+				<br>
+				<div class="login" id="auth-form">
+						<input type="text" placeholder="username" id="user" name="username"><br>
+						<input type="password" placeholder="password" id="password" name="password"><br>
+            <input type="button" id="submit" value="Login"><br>
+            <span id="warning"></span>
+				</div>
+		</div>
+    <div id="messenger">
+        <div class="chat-canvas">
+            <div class="chat-ui-canvas">
+                <div id="header" class="header header-scrolled">
+                    <div class="top-icons">
+                        <div id="logout" class="back-arrow">
+                            Log out
+                        </div>
+                    </div>
+                    <div class="user-name-header"><h1>My Chat</h1></div>
+                </div>
+                <div id="message-feed" class="message-feed message-feed-unscrolled">
+                </div>
+                <div class="message-input-bar">
+                    <div class="message-text-input">
+                        <form class="message-send">
+                            <textarea name="message-input" id="message-input" placeholder="Message..." value=""></textarea>
+                            <span id="submit-message">SEND</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "name": "chat-app-frontend",
+  "version": "1.0.0",
+  "description": "chat application frontend that allows users to communicate with chat messages after authentication",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "server": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "babel-node server.js",
+    "test": "nyc --reporter=html --reporter=lcov jest",
+    "test:e2e": "nightwatch"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "roots": ["<rootDir>/__tests__/"],
+    "testEnvironment": "jsdom",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/e2e/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "verbose": true,
+    "setupFiles": [
+      "jest-localstorage-mock",
+      "<rootDir>/test-env.js"
+    ],
+    "setupTestFrameworkScriptFile": "jest-environment-jsdom"
+  },
+  "proxy": "http://localhost:8000/",
+  "keywords": [
+    "chat"
+  ],
+  "author": "Olarewaju Akeem Opeyemi",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-core": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "identity-obj-proxy": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "jest": "^22.1.4",
+    "jest-environment-jsdom": "^22.1.4",
+    "jest-localstorage-mock": "^2.2.0",
+    "mocha": "^5.0.0",
+    "mocha-jsdom": "^1.1.0",
+    "mock-socket": "^7.1.0",
+    "moxios": "^0.4.0",
+    "nightwatch": "^0.9.19",
+    "nyc": "^11.4.1",
+    "regenerator-runtime": "^0.11.1",
+    "sinon": "^4.2.0",
+    "webpack-dev-server": "^2.11.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.9",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "jsonwebtoken": "^8.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0"
+  }
+}
