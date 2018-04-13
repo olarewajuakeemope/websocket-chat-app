@@ -1,0 +1,9 @@
+**/node_modules
+**/.DS_Store
+**/coverage/
+**/.nyc_output
+**/.vscode
+**/reports/
+**/bin/
+**/**.log
+.DS_Store
